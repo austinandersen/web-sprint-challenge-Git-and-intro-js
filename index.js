@@ -258,6 +258,7 @@ function get20s(array) {
 console.log('task 4:', get20s(artists))
 
 
+
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use removeArtist to do the following:
 1. Receive an array
@@ -314,7 +315,7 @@ For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte
 
 function lotsOfArt(array) {
   const newArray = []
-  for(i = 0; i < array.length; i++){
+  for(let i = 0; i < array.length; i++){
     if(array[i].paintings > 100){
       newArray.push(array[i].name)
     } 
@@ -335,9 +336,9 @@ For example artistInfo(artists, 'Frida Kahlo') will return:
 */
 
 function artistInfo(array, name) {
-  for(i = 0; i < array.length; i++){
+  for(let i = 0; i < array.length; i++){
     if(array[i].name === name){
-      return array[i].bio
+      return [array[i].bio]
     }
   }
 }
@@ -352,16 +353,17 @@ Use artistByCountry to do the following:
 For example artistByCountry(artists, 'Spanish') will return: [ 'Salvador Dali', 'Pablo Picasso', 'Francisco Goya', 'El Greco' ]
 */
 
-function artistByCountry(array, nationality){
+function artistByCountry (array, nation){
   const newArray = []
-  for(i = 0; i < array.length; i++){
-    if(array[i].nationality === nationality){
+  for(let i = 0; i < array.length; i++){
+    if(array[i].nationality === nation){
       newArray.push(array[i].name)
     }
   }
   return newArray
 }
 console.log('task 9:', artistByCountry(artists, 'Russian'))
+
 
 
 /* ***** END OF TASKS ***** */
